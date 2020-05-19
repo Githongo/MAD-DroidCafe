@@ -1,6 +1,7 @@
 package com.jeffreykingori.droidcafe;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -54,8 +55,46 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()){
+            case R.id.action_order:
+                Intent toOrder = new Intent(MainActivity.this, OrderActivity.class);
+                toOrder.putExtra(EXTRA_ORDER_KEY, mOrderMessage);
+                startActivity(toOrder);
+                return true;
+
+            case R.id.action_call_us:
+                //Call number
+                Uri myUri = Uri.parse("tel:0710113242");
+                Intent myIntent = new Intent(Intent.ACTION_DIAL, myUri);
+                startActivity(myIntent);
+                break;
+
+            case R.id.action_about_us:
+                //redirect to web page
+                String url = "https://jeffreykingori.dev/#about";
+                Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                webIntent.setData(Uri.parse(url));
+                startActivity(webIntent);
+                break;
+
+            case R.id.action_status:
+                displayToast("Your have no pending orders");
+                break;
+
+            case R.id.action_location:
+                //redirect to g-maps
+                Uri gmmIntentUri = Uri.parse("geo:-1.286389,36.817223?q=java house");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+                break;
+
+
+            default:
+                break;
+
+
+
         }
 
         return super.onOptionsItemSelected(item);
