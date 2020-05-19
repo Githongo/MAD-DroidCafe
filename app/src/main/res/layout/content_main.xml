@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/text_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/droid_desserts"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_choose_desserts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/choose_desserts"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_intro" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/donut"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/donut"
+        android:contentDescription="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:onClick="showDonutMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_choose_desserts"
+        />
+    <TextView
+        android:id="@+id/text_donut"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/text_choose_desserts"
+        app:layout_constraintBottom_toBottomOf="@+id/donut"
+        app:layout_constraintLeft_toRightOf="@+id/donut"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lollipop"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/lollipop"
+        android:contentDescription="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:onClick="showLollipopMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donut"
+        />
+    <TextView
+        android:id="@+id/text_lollipop"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/light_up_your_taste_buds"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/lollipop"
+        app:layout_constraintBottom_toBottomOf="@+id/donut"
+        app:layout_constraintLeft_toRightOf="@+id/lollipop"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cupcake"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cupcake"
+        android:contentDescription="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:onClick="showCupcakeMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lollipop"
+        />
+    <TextView
+        android:id="@+id/text_cupcake"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lot_s_of_things_have_changed_but_cupcake_s_goodness_hasn_t"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/cupcake"
+        app:layout_constraintBottom_toBottomOf="@+id/lollipop"
+        app:layout_constraintLeft_toRightOf="@+id/cupcake"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

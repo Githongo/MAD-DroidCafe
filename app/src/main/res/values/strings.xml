@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Droid Cafe</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="droid_desserts">Droid Desserts</string>
+    <string name="choose_desserts">Choose Desserts</string>
+    <string name="donuts_are_glazed_and_sprinkled_with_candy">Donuts are glazed and sprinkled with candy</string>
+    <string name="light_up_your_taste_buds">Light up’ your taste buds’!</string>
+    <string name="lot_s_of_things_have_changed_but_cupcake_s_goodness_hasn_t">Lot’s of things have changed, but Cupcake\'s goodness hasn’t.</string>
+
+    <string name="donut_order">You have ordered donuts</string>
+    <string name="lollipop_order">You have ordered lollipops</string>
+    <string name="cupcake_order">You have ordered cupcakes</string>
+    <string name="choose_delivery_method">Choose Delivery Method</string>
+    <string name="same_day_delivery">Same Day Delivery</string>
+    <string name="next_day_delivery">Next Day Delivery</string>
+    <string name="pick_up">Pick up</string>
+
+</resources>
